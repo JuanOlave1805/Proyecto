@@ -9,16 +9,60 @@
     /* Globales */
   --blanco:#FFFFFF;
   --letra: #1B1817;
-  --color-principal-1: #6A90F1;
-  --color-principal-2: #424C64;
+  --primary: #6A90F1;
+  --secundary: #424C64;
+  --black: #000000;
+  --blue-celest: #DDEFFA;
+  --max-whith: 1420px
 }
 
 html{
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif; 
+    font-size: 14px;
 }
 
 body{
-  background: linear-gradient(var(--color-principal-1),var(--color-principal-2));
+  background: linear-gradient(var(--primary),var(--secundary));
 }
-
+.text-nav_black{
+    color: var(--black);
+}
+.content-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.content-card{
+    width: 100%;
+    height: auto;
+    max-width: var(--max-whith);
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    padding:0 5vh 4vh;
+}
+.card{
+    height: auto;
+    background-color: var(--blue-celest);
+    width: 220px;
+    border-radius: 20px;
+}
+.image-card{
+    background-image: url("../../Imagenes/simpson.jpg");
+    height: 20vh;
+    width: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+.text-card{
+    margin: 10px;
+}
+.text-card>p{
+    margin: 2px 0 5px 0;
+    font-size: 16px;
+}

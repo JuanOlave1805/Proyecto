@@ -9,7 +9,8 @@
     /* Globales */
   --blanco:#FFFFFF;
   --letra: #1B1817;
-
+  --color-principal-1: #6A90F1;
+  --color-principal-2: #424C64;
 }
 
 html{
@@ -18,7 +19,7 @@ html{
 }
 
 body{
-  background: linear-gradient(#6A90F1, #424C64);
+  background: linear-gradient(var(--color-principal-1),var(--color-principal-2));
 }
   
   /* header */

@@ -22,20 +22,3 @@ body{
   background: linear-gradient(var(--color-principal-1),var(--color-principal-2));
 }
 
-.slider_1{
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-.slider_1>video{
-  width: 100%;
-  height: 80vh;
-  object-fit: cover
-}
-@media(max-width:1200px){
-  .slider_1>video{
-    object-fit: fill;
-    height: auto; 
-  }
-}
-/* qr monkey, squoosh, pixabay, flavicon, page rule, invisionapp, studio desing*/

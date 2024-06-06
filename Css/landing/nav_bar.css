@@ -39,6 +39,7 @@ background: linear-gradient(var(--primary),var(--secundary));
     justify-content: space-between;
     width: 100%;
     max-width: 1420px;
+    padding: 0 6vw;
   }
   .toggle-menu, #toogle-menu{
     display: none;
@@ -119,21 +120,32 @@ background: linear-gradient(var(--primary),var(--secundary));
     border: solid .5px var(--letra);
   }
 
-  
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
+    .main-menu{
+      width: 60vw;
+      justify-content: space-evenly;
+    }
+  }
+  @media (max-width: 870px){
+    header{
+      height: 10vh;
+    }
+    /* nav */
+    nav{
+      height: auto;
+    }
       /* toggle */
     .toggle-menu{
       display: block;
-      width: 55px;
+      width: 7vw;
       height: auto;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+      margin: auto 0;
       cursor: pointer;
       z-index: 1;
     }
-    .toggle-menu img{
+    .toggle-menu>img{
       width: 100%;
+      height: auto;
     }
     .main-menu{
       list-style: none;
@@ -155,15 +167,13 @@ background: linear-gradient(var(--primary),var(--secundary));
       transform: translateY(0);
     }
   }
-  @media(max-width: 500px){
-    header{
-      height: 8vh;
-    }
+  @media(max-width: 725px){
     .toggle-menu{
-      width: 40px;
+      width: 10vw;
     }
-    .img-logo{
-      width: 8vh;
-      margin-left: 5px;
+  }
+   @media(max-width: 500px){
+    .toggle-menu{
+      width: 12vw;
     }
   }

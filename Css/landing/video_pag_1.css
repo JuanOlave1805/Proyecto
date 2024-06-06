@@ -25,7 +25,6 @@ background: linear-gradient(var(--primary),var(--secundary));
 
 .content-video{
   height: 85vh;
-  background-color: red;
   display: flex;
   align-items: end;
 }
@@ -48,15 +47,15 @@ background: linear-gradient(var(--primary),var(--secundary));
 }
 @media(max-width:520px){
   .content-video{
-    height: 40vh;
+    height: 50vh;
   }
 }
 @media(max-width:340px){
   .content-video{
-    height: 30vh;
+    height: 44vh;
   }
   .content-video2{
-    height: 76%;
+    height: 78%;
   }
 }
 /* qr monkey, squoosh, pixabay, flavicon, page rule, invisionapp, studio desing*/

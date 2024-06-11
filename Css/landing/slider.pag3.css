@@ -1,0 +1,25 @@
+@import url(cards_pag_2.css);
+
+.section__Slider{
+      position: relative;
+      height: 10%;
+      background-color: red;
+      /* width: 100%; */
+}
+.swiper {
+  /* width: 100%; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}

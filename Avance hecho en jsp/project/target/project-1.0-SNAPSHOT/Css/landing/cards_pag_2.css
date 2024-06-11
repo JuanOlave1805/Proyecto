@@ -43,8 +43,6 @@ body{
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); /* Sombra solo en la parte inferior */
-  font-size: clamp(14px,5vw,36px);
-  padding: var(--px-10) 0;
 }
 
 @keyframes fluido {

@@ -14,7 +14,7 @@
   margin: 0 auto;
 }
 .help__Image{
-  background-image: url("/Imagenes/imagenes\ prueba/c.jpg");
+  background-image: url("Imagenes/imagenes\ prueba/c.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 40vw;

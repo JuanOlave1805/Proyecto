@@ -112,15 +112,16 @@ body{
   }
   .text-card{
     margin: 0 10px;
-    width: 50%;
+    width: auto;
+    gap: 0;
   }
   .text-card>p{
     margin: 0;
-    font-size: clamp(12px, 2vw, 16px);
+    font-size: clamp(8px, 2vw, 16px);
   }
   .text-card>h2{
     margin: 0;
-    font-size: clamp(14px, 3vw, 18px);
+    font-size: clamp(10px, 3vw, 18px);
   }
   .card{
     width: 100%;
@@ -134,7 +135,7 @@ body{
     margin: 8px;
   }
   .image-card> img{
-    width: 8vw;
+    width: clamp(30px, 10vw, 80px);
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;

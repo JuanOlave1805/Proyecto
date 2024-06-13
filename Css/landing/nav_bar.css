@@ -39,6 +39,7 @@ background: linear-gradient(var(--primary),var(--secundary));
     justify-content: space-between;
     width: 100%;
     max-width: 1420px;
+    height: 90px;
     padding: 0 5vw;
   }
   .toggle-menu, #toogle-menu{
@@ -122,12 +123,12 @@ background: linear-gradient(var(--primary),var(--secundary));
   @media (max-width: 870px){
     /* nav */
     nav{
-      height: auto;
+      height: clamp(80px, 10vw, 100px);
     }
     /* Textos */
     .text-nav--absolute{
     position: absolute;
-    top: 3vh;
+    top: 4vh;
     left: 15vw;
     }
       /* toggle */
@@ -140,7 +141,7 @@ background: linear-gradient(var(--primary),var(--secundary));
       width: 55px;
       margin: auto 0;
       cursor: pointer;
-      z-index: 1;
+      z-index: 2;
     }
     .toggle-menu>img{
       width: 100%;
@@ -169,7 +170,11 @@ background: linear-gradient(var(--primary),var(--secundary));
   @media(max-width: 700px) {
     /* Textos */
     .text-nav--absolute{
-    top: 25px;
-    left: 100px;
+    left: 20vw;
+    }
+  }
+  @media (width <= 470px){
+    .text-nav--absolute{
+      left: 100px;
     }
   }

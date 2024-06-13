@@ -11,14 +11,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
-  padding: 0 5vw; 
+    padding: 0 5vw;
+    z-index: -1; 
 }
 .swiper {
   width: 100%;
   max-width: 1240px;
   height: 45vh;
-  z-index: -1;
 }
 
 .swiper-slide {
@@ -43,6 +42,7 @@
   font-style: normal;
   font-size: clamp(32px, 5vw, 42px);
   color: #fff;
+  z-index: -1;
 }
 .swiper-slide h2{
   position: absolute;

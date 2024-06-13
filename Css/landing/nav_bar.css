@@ -96,22 +96,21 @@ background: linear-gradient(var(--primary),var(--secundary));
 
   /* textos */
   .text-nav{
-    font-size: clamp(14px, 10vw, 22px);
+    font-size: clamp(14px, 10vw, 16px);
     color: var(--letra);
     text-decoration: none;
   }
 
   /* Lista con espacios iguales */
   .list {
-    display: flex;
-    justify-content: space-evenly;
+    gap: clamp(10px, 5vw, 20px);
   }
 
   /* Button */
   .button_nav{
     background-color: var(--letra);
     color: var(--blanco);
-    padding: 5px 10px;
+    padding:12px 22px;
     border-radius: 10px;
   }
   .button_nav:hover{
@@ -120,12 +119,6 @@ background: linear-gradient(var(--primary),var(--secundary));
     border: solid .5px var(--letra);
   }
 
-  @media (max-width: 1200px){
-    .main-menu{
-      width: 60vw;
-      justify-content: space-evenly;
-    }
-  }
   @media (max-width: 870px){
     /* nav */
     nav{

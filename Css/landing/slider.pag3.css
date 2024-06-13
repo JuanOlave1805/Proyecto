@@ -5,36 +5,40 @@
     position: relative;
     height: 60vh;
     margin: 0 auto;
-    max-width: 1240px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  padding: 0 5vw; 
 }
 .swiper {
   width: 100%;
+  max-width: 1240px;
   height: 45vh;
 }
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
   background: #fff;
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .swiper-slide img {
   display: block;
-  border-radius: 20px;
+  border-radius: 10px;
   width: auto;
   height: 70%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
 }
 .swiper-slide h2 {
   position: absolute;
-  bottom: 1vh;
+  bottom: 2vh;
   font-family: "Spicy Rice", serif;
   font-weight: 400;
   font-style: normal;

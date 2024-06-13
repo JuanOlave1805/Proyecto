@@ -29,6 +29,11 @@ body{
 /* .text-nav_black{
     color: var(--black);
 } */
+.section__cards{
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3vh;
+}
 .content-title{
     height: auto;
     width: auto;
@@ -60,15 +65,15 @@ body{
 }
 
 .content-card{
+    max-width: var(--max-whith);
     width: 100%;
     height: auto;
-    max-width: var(--max-whith);
     display: grid;
     gap: 20px;
     padding: 0 5vw;
     margin: 0 auto;
     grid-template-columns: repeat(5, 1fr) ;
-    padding-bottom: 2vh;
+    padding-bottom: 5vh;
 }
 .card{
     background-color: var(--blue-celest);
@@ -104,20 +109,22 @@ body{
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr;
+    padding: 0 5vw;
   }
   .text-card{
     margin: 0 10px;
+    width: 50%;
   }
   .text-card>p{
     margin: 0;
-    font-size: clamp(8px, 2vw, 14px);
+    font-size: clamp(12px, 2vw, 16px);
   }
   .text-card>h2{
     margin: 0;
-    font-size: clamp(10px, 3vw, 16px);
+    font-size: clamp(14px, 3vw, 18px);
   }
   .card{
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     gap: 10px;

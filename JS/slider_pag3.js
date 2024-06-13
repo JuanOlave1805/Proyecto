@@ -4,7 +4,7 @@ if (window.matchMedia("(max-width: 720px)").matches) {
     slidesToShow = 1;
 } else if (window.matchMedia("(max-width: 1120px)").matches) {
     slidesToShow = 2;
-} else if (window.matchMedia("(max-width: 1720px)").matches) {
+} else if (window.matchMedia("(max-width: 1980px)").matches) {
     slidesToShow = 3;
 } else {
     slidesToShow = 4;

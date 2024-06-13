@@ -18,6 +18,7 @@
   width: 100%;
   max-width: 1240px;
   height: 45vh;
+  z-index: -1;
 }
 
 .swiper-slide {
@@ -36,11 +37,16 @@
   width: auto;
   height: 70%;
 }
-.swiper-slide h2 {
-  position: absolute;
-  bottom: 2vh;
+.swiper-slide h2, .section__Slider h1 {
   font-family: "Spicy Rice", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: clamp(32px, 5vw, 42px);
+  color: #fff;
+}
+.swiper-slide h2{
+  position: absolute;
+  bottom: 2vh;
   font-size: 32px;
+  color: #000000;
 }

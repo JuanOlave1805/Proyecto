@@ -1,0 +1,51 @@
+@import url("help_pag_3.css");
+footer{
+    background-color: #000000;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    max-width: 1220px;
+    margin: 0 auto;
+    height: 300px;
+  }
+  .footer__Section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .footer__Section img{
+    width: clamp(44px, 10vw, 82px);
+  }
+  .footer__Section p{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: clamp(10px, 2vw, 22px);  
+    font-style: normal;
+  }
+  .icons, .footer__Section p{
+    color: #fff;
+  }
+  .icons svg{
+    width: clamp(18px, 3vw, 24px);  
+    height: auto;
+    margin-right: 5px;
+  }
+  .icons{
+    text-decoration: none;
+  }
+  @media (width <= 650px){
+    .footer{
+      flex-direction: column-reverse;
+      height: 220px;
+      padding: 10px 0;
+    }
+    .footer__Section p{
+      text-align: center;
+    }
+     .footer__Section{
+        gap: 10px;
+        align-items: center;
+     }
+  }

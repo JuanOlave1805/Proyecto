@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 .section__Help{
-  margin: 0 auto;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .Help{
   display: flex;
   justify-content: space-evenly;
-  height: 60vh;
+  height: 500px;
   width: 100%;
   max-width: 1240px;
   /* background-color:antiquewhite; */
   gap: 30px;
-  margin: 0 auto;
+  margin: 0 80px;
+  display: flex;
+  justify-content: center;
 }
 .help__Image{
-  background-image: url("Imagenes/imagenes\ prueba/c.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 40vw;
-  height: 70%;
+  height: 400px;
   margin: auto 0;
+  background-size: cover;
+  background-image: url("/Imagenes/imagenes\ prueba/c.jpg");
   border-radius: 20px;
 }
 .help__Text{
@@ -63,33 +65,51 @@
 }
 
 @media (width <= 1020px){
-  body{
-    background: rebeccapurple;
-  }
   .section__Help{
     padding: 0 2vw;
   }
   .Help{
-    margin: 3vh 0;
+    margin: 3vh 80px;
     width: 100%;
     flex-direction: column-reverse;
-    height: auto;
   }
   .help__Image{
-    height: 40vh;
     width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
   .help__Text{
-    gap: 15px;
+    gap: 18px;
     width: 100%;
+    margin: 0 auto;
+  }
+  .help__Text > h2{
+    text-align: center;
   }
   .help__Text> button{
     padding: 12px 22px ;
   }
 }
+@media (width <= 870px){
+  .Help{
+    margin: 3vh 32px;
+    height: 400px;
+  }
+  .help__Text{
+    gap: 15px;
+  }
+}
 @media (width <= 580px){
+  .Help{
+    margin: 1vh 20px;
+  }
   .help__Image{
-    height: 30vh;
+    height: 100%;
+  }
+  .help__Text{
+    gap: 10px;
   }
   .help__Text> button{
     width: 40vw;

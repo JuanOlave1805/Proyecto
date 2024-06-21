@@ -1,44 +1,43 @@
 @import url(cards_pag_2.css);
-@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
 
-.section__Slider{
-    position: relative;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 5vw;
-    z-index: -1; 
+.section__Slider {
+  position: relative;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 5vw;
+  z-index: -1;
 }
+
 .swiper {
   width: 100%;
-  max-width: 1240px;
-  height: 60%;
-  margin: 0 80px;
+  height: 100%;
 }
 
 .swiper-slide {
   text-align: center;
+  font-size: 18px;
   background: #fff;
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  border-radius: 10px;
-  height: 100%;
 }
 
 .swiper-slide img {
   display: block;
-  border-radius: 10px;
-  width: auto;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.swiper-slide h2, .section__Slider h1 {
+
+.swiper-slide h2,
+.section__Slider h1 {
   font-family: "Spicy Rice", serif;
   font-weight: 400;
   font-style: normal;
@@ -46,30 +45,30 @@
   color: #fff;
   z-index: -1;
 }
-.swiper-slide h2{
+.swiper-slide h2 {
   position: absolute;
   bottom: 2vh;
   font-size: 32px;
   color: #000000;
 }
 
-@media (width <= 840px){
-  .section__Slider{
+@media (width <= 840px) {
+  .section__Slider {
     height: 400px;
   }
-  .swiper{
+  .swiper {
     margin: 0 32px;
     height: 70%;
   }
 }
-@media (width <= 540px){
-  .section__Slider{
+@media (width <= 540px) {
+  .section__Slider {
     height: 300px;
   }
-  .swiper{
+  .swiper {
     margin: 0 20px;
   }
-  .swiper-slide img{
+  .swiper-slide img {
     height: 105px;
   }
 }

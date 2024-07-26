@@ -1,13 +1,13 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const botonRegistrarse = document.getElementById('registrarse');
+const botonIniciarSesion = document.getElementById('iniciarSesion');
+const contenedor = document.getElementById('contenedor');
 
-// Evento para abrir form de registro
-signUpButton.addEventListener('click', () =>
-  container.classList.add('right-panel-active')
+// Evento para abrir formulario de registro
+botonRegistrarse.addEventListener('click', () =>
+  contenedor.classList.add('panel-derecha-activa')
 );
 
-// Evento para regresar al form de iniciar sesión
-signInButton.addEventListener('click', () =>
-  container.classList.remove('right-panel-active')
+// Evento para regresar al formulario de iniciar sesión
+botonIniciarSesion.addEventListener('click', () =>
+  contenedor.classList.remove('panel-derecha-activa')
 );

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,8 @@
     <title>login</title>
   </head>
   <body>
-    <div class="container" id="container">
-      <div class="form-container sign-up-container">
+    <div class="contenedor" id="contenedor">
+      <div class="contenedor-formulario formulario-registrarse">
         <form action="#">
           <h1>Registrate</h1>
           <input type="text" placeholder="Ingresa tu Nombre" />
@@ -23,21 +23,9 @@
           <button id="lila">Registrarme</button>
         </form>
       </div>
-      <div class="form-container sign-in-container">
+      <div class="contenedor-formulario formulario-iniciar-sesion">
         <form action="#">
           <h1>Iniciar Sesión</h1>
-          <!-- <div class="social-container">
-            <a href="#" class="social">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social>">
-              <i class="fab fa-google" id="red"></i>
-            </a>
-            <a href="#" class="social">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          <span>o usa tu email</span> -->
           <div>
             <label for="">Ingresa tu email:</label>
             <input type="email" placeholder="Ingresa tu Email" />
@@ -48,22 +36,21 @@
           <button>Iniciar sesión</button>
         </form>
       </div>
-      <div class="overlay-container">
-        <div class="overlay">
-          <div class="overlay-panel overlay-left">
+      <div class="contenedor-superposicion">
+        <div class="superposicion">
+          <div class="panel-superposicion panel-izquierda">
             <div>
               <h1>¡Bienvenido!</h1>
               <p>Bienvenido, inicia sesion y disfruta de la mejor tienda de bicicletas virtual</p>
             </div>
-            
-            <button class="ghost" id="signIn">Inicia sesión</button>
+            <button class="fantasma" id="iniciarSesion">Inicia sesión</button>
           </div>
-          <div class="overlay-panel overlay-right">
+          <div class="panel-superposicion panel-derecha">
             <div>
               <h1>¡Bienvenido!</h1>
               <p>Bienvenido, registrate y disfruta de la mejor tienda de bicicletas virtual</p>
             </div>
-            <button class="ghost" id="signUp">Registrar</button>
+            <button class="fantasma" id="registrarse">Registrar</button>
           </div>
         </div>
       </div>

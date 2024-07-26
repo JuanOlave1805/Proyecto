@@ -1,4 +1,4 @@
-/* importar fuente */
+/* Importar fuente */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -7,7 +7,7 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background:#ece0e0;
+  background: #ece0e0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,14 +38,15 @@ a {
   text-decoration: none;
   margin: 15px 0;
 }
-#red {
+
+#rojo {
   color: red;
 }
 
-.container {
+.contenedor {
   background: transparent;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0, 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
   width: 768px;
@@ -53,12 +54,13 @@ a {
   min-height: 480px;
 }
 
-.form-container {
-  background:linear-gradient(to bottom, rgb(220, 243, 157) 0%, rgba(236,220,216,1) 50%, rgb(206, 187, 187) 100%);
+.contenedor-formulario {
+  background: linear-gradient(to bottom, rgb(220, 243, 157) 0%, rgba(236,220,216,1) 50%, rgb(206, 187, 187) 100%);
   padding: 0 50px;
   height: 100%;
 }
-form{
+
+form {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -66,26 +68,32 @@ form{
   align-items: center;
   text-align: center;
 }
+
 form > div {
   text-align: start;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
-.sign-in-container > form > h1{
+
+.formulario-iniciar-sesion > form > h1 {
   color: white;
 }
-.sign-up-container > form > h1{
+
+.formulario-registrarse > form > h1 {
   color: white;
 }
-.social-container {
+
+.contenedor-social {
   margin: 20px 0;
 }
 
-.social-container img{
+.contenedor-social img {
   width: 5vw;
 }
-/* .social-container a {
+
+/*
+.contenedor-social a {
   border: 1px solid #ddd;
   border-radius: 50%;
   display: inline-flex;
@@ -94,9 +102,10 @@ form > div {
   margin: 0 5px;
   height: 40px;
   width: 40px;
-} */
+}
+*/
 
-.form-container input {
+.contenedor-formulario input {
   background: #eee;
   border-radius: 10px;
   border: none;
@@ -106,12 +115,12 @@ form > div {
   outline: none;
 }
 
-.form-container input{
-  border: transparent solid .5px;
+.contenedor-formulario input {
+  border: transparent solid 0.5px;
 }
 
-.form-container input:focus{
-  border: #94b98b solid .5px;
+.contenedor-formulario input:focus {
+  border: #94b98b solid 0.5px;
 }
 
 button {
@@ -141,32 +150,32 @@ button:focus {
   outline: none;
 }
 
-button.ghost {
+button.fantasma {
   border-color: #fff;
   background: transparent;
   backdrop-filter: blur(2px);
 }
 
-.form-container {
+.contenedor-formulario {
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.formulario-iniciar-sesion {
   left: 0;
   width: 50%;
   z-index: 2;
 }
 
-.sign-up-container {
+.formulario-registrarse {
   left: 0;
   width: 50%;
   z-index: 1;
 }
 
-.overlay-container {
+.contenedor-superposicion {
   position: absolute;
   top: 0;
   left: 50%;
@@ -177,19 +186,17 @@ button.ghost {
   z-index: 100;
 }
 
-.overlay {
-  /* background: #ff416c; */
-  /* background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover; */
+.superposicion {
   color: #fff;
   position: relative;
   left: -100%;
   height: 100%;
   width: 200%;
   transform: translateX(0);
-  transition: tranform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
-.overlay-panel {
+.panel-superposicion {
   position: absolute;
   top: 0;
   display: flex;
@@ -202,65 +209,75 @@ button.ghost {
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
-.overlay-left > div > p{
+
+.panel-izquierda > div > p {
   color: black;
   font-size: 18px;
 }
-.overlay-left > div > h1{
+
+.panel-izquierda > div > h1 {
   color: rgb(255, 255, 255);
 }
-.overlay-right > div > p{
+
+.panel-derecha > div > p {
   color: white;
   font-size: 16px;
 }
-#signIn, #signUp{
+
+#iniciarSesion, #registrarse {
   color: white;
 }
 
-.overlay-right {
+.panel-derecha {
   right: 0;
   transform: translateX(0);
-  background-image: url("image1\ -\ copia.jpg");
+  background-image: url("image1 - copia.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* color: rgb(161, 224, 42); */
 }
 
-.overlay-left {
+.panel-izquierda {
   background-image: url("ll.jpg");
   transition: translateX(0%);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* Animation */
+/* Animación */
 
-/* Move signin to the right */
-.container.right-panel-active .sign-in-container {
+/* Mover formulario de iniciar sesión a la derecha */
+.contenedor.panel-derecha-activa .formulario-iniciar-sesion {
   transform: translateX(100%);
 }
 
-/* Move overlay to left */
-.container.right-panel-active .overlay-container {
+/* Mover superposición a la izquierda */
+.contenedor.panel-derecha-activa .contenedor-superposicion {
   transform: translateX(-100%);
 }
 
-/* Bring sign up over sign in */
-.container.container.right-panel-active .sign-up-container {
+/* Traer formulario de registro sobre formulario de iniciar sesión */
+.contenedor.panel-derecha-activa .formulario-registrarse {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
 }
 
-/* Move overlay back to right */
-.container.right-panel-active .overlay {
+/* Mover superposición de nuevo a la derecha */
+.contenedor.panel-derecha-activa .superposicion {
   transform: translateX(50%);
 }
 
-.container.right-panel-active .overlay-left {
+.contenedor.panel-derecha-activa .panel-izquierda {
   transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.contenedor.panel-derecha-activa .panel-derecha {
   transform: translateX(0%);
+}
+
+@media (max-width: 810px) {
+  .contenedor {
+    width: 90vw;
+  }
+  
 }

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--black-primary: #000000;
+	--white-primaty: #ffffff;
+}
+
+html {
+    background: var(--black-primary);
+    color: var(--white-primaty)
+    font-family: "Oswald", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: <weight>;
+  	font-style: normal;
+  	font-size: 14px;
+}
+
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	color: var(--white-primaty);
+}
+main > article{
+	height: 100%;
+	width: 100%;
+	max-width: 1900px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+h1{
+	font-family: "Oswald", sans-serif;
+	font-size: 3rem;
+	color: var(--white-primaty);
+}
+h3{
+	font-family: "Oswald", sans-serif;
+	font-size: 2rem;
+	color: var(--white-primaty);
+}
+
+form{
+	height: 500px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+
+.formDiv{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 60px;
+}
+
+.formDiv > label{
+	font-family: "Oswald", sans-serif;
+	font-size: 1.5rem;
+}
+
+.formDiv > input {
+	color: var(--white-primaty);
+    background: transparent;
+    font-size: 1.2rem;
+    border: none; /* Asegura que no haya bordes por defecto */
+    border-bottom: 2px solid var(--white-primaty); /* Borde inferior blanco */
+    outline: none; /* Elimina el borde por defecto que aparece al hacer clic */
+}
+
+/* Opcional: Estilo adicional para mantener el borde blanco cuando el input está enfocado */
+.formDiv > input:focus {
+    border-bottom: 2px solid var(--white-primaty); 
+}
+
+
+
+.formButton {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;	
+}
+
+.formButton > input {
+    color: var(--black-primary);
+    background: var(--white-primaty); /* Corregido a --white-primary */
+    outline: none; /* Elimina el borde por defecto que aparece al hacer clic */
+    padding: 12px 24px; /* Espaciado alrededor del texto */
+    font-size: 1.2rem; /* Tamaño del texto */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el estado hover del botón */
+.formButton > input:hover {
+    background: var(--black-primary); /* Fondo negro en hover */
+    color: var(--white-primary); /* Texto blanco en hover */
+}
+
+
+
+
+/* Estilos para pantallas de computadora */
+@media (min-width: 1024px) {
+    .formButton > input {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+}
+
+/* Estilos para pantallas de tableta */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .formButton > input {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Estilos para pantallas de móvil */
+@media (max-width: 767px) {
+    .formButton > input {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

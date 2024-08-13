@@ -1,0 +1,93 @@
+{
+  "rol": [
+    {
+      "id": "1",
+      "name": "VENDEDOR"
+    },
+    {
+      "id": "2",
+      "name": "ADMINISTRADOR"
+    }
+  ],
+  "usuario": [
+    {
+      "id": "1102548251",
+      "nombre": "Juan",
+      "apellido": "Olave",
+      "edad": "19",
+      "correo": "correo@correo.com",
+      "telefono": "3229126084",
+      "rol": "2",
+      "estado": "ACTIVO",
+      "contrasena": "12345"
+    }
+  ],
+  "reportes": [
+    {
+      "fechaReporte": "",
+      "fechaInicioReporte": "",
+      "fechaFinReporte": "",
+      "usuarioGenerador": "",
+      "tipoReporte": "",
+      "id": "0239"
+    }
+  ],
+  "proveedores": [
+    {
+      "id": "c7c1",
+      "nombre": "SPECIALIZED",
+      "contactoNombre": "Pepito Perez",
+      "correo": "correo@correo.com",
+      "telefono": "3226126084"
+    },
+    {
+      "id": "5d55",
+      "nombre": "PIRINEOS",
+      "contactoNombre": "Jose Piojo",
+      "correo": "correo@correo.com",
+      "telefono": "3221111111"
+    }
+  ],
+  "producto": [
+    {
+      "id": "1",
+      "nombre": "Rin 27",
+      "precioCompra": "100",
+      "precioVenta": "120",
+      "stock": "10",
+      "categoria": "1",
+      "proveedor": "1"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "1",
+      "idCliente": "1102548251",
+      "idUsuario": "1102548251",
+      "fechaPedido": "2024/08/05",
+      "total": "1000",
+      "tipoPedido": "Venta",
+      "manoObra": "0",
+      "fechaEntregaPedido": "0000/00/00",
+      "descripcion": ""
+    }
+  ],
+  "detallePedidos": [
+    {
+      "id": "1",
+      "idPedido": "1",
+      "idProducto": "1",
+      "cantidad": "1",
+      "precioSinIva": "100",
+      "precioConIva": "1000",
+      "precioIva": "100",
+      "porcentajeIva": "5"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "LLANTA PISTA"
+    }
+  ]
+}

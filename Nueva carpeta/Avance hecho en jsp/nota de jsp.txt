@@ -1,0 +1,10 @@
+Siempre modificar este plugin para que ejecute el archivo jsp
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.2.3</version>
+    <configuration>
+       <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
+</plugin>

@@ -1,0 +1,41 @@
+Tallajes y notas
+En ese sentido, para niños, las tallas de aros son las siguientes:
+90cm a 105cm: aros 12.
+100cm a 120cm: aros 16.
+120cm a 130cm: aros 20.
+140cm a 145cm: aros 24.
+Por su parte, para adultos, son las siguientes medidas:
+150cm a 175cm: aros 26.
+150cm a 180cm: aros 27.5.
+165cm a 188cm: aros 29.
+
+
+-Hallar los nombres de las constraint
+SHOW CREATE TABLE nombre_tabla
+
+-Eliminar constraint de foreign key 
+alter table tb_talla_tipo_producto drop constraint Nombre_constraint_encontrada_con_la_linea_de_codigo_anterior;
+
+-Cambiar nombre a tabla 
+alter table nombre_anterior rename nombre_a_cambiar;
+
+-Agregar foranea a campo ya existente
+ALTER TABLE tb_productos 
+ADD CONSTRAINT id_Accesorios_FK 
+FOREIGN KEY (id_Accesorios_FK) 
+REFERENCES tb_accesorios (id_Accesorio_PK);
+
+
+
+
+
+
+
+-Elimine tabla tb_talla_bicicleta, agregando el valor talla_rin en la tabla tb_tipo_producto
+
+-Elimine tabla tb_tarea
+-Cambie nombre de tabla empleado a usuario
+-Elimine tabla registro
+-Conecte tb_usuario a tb_accion
+-Borre tabla de reparaciones
+-Agregue la tabla tb_accesorios

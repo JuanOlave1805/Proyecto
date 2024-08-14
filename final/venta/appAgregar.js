@@ -1,24 +1,15 @@
-import { pedidos } from "../Modulos JS/config.js"; 
 import  solicitud  from "../Modulos JS/listar.js";
-import { categorias, producto } from "../Modulos JS/config.js";
+import { categorias, producto, proveedores } from "../Modulos JS/config.js";
 
 const dom = document;
-const $table = dom.querySelector("#tableProductos");
+const $table = dom.querySelector("#table");
 const $selectCategoria = dom.querySelector("#categoria")
-console.log($selectCategoria.value)
-
-$selectCategoria.addEventListener('click', function() {
-    let capturado = $selectCategoria.value;
-
-
-})
+const $fragmento = document.createDocumentFragment();
 
 // Eventos
 document.addEventListener("DOMContentLoaded", function() {
     validarSesion();
     listar();
-    cargarProductos();
-    console.log($selectCategoria.value)
 });
 
 document.getElementById('menuIcon').addEventListener('click', function() {
@@ -26,6 +17,12 @@ document.getElementById('menuIcon').addEventListener('click', function() {
     botonera.classList.toggle('active');
 });
 
+$selectCategoria.addEventListener('click', function() {
+    limpiar();
+    let capturado = $selectCategoria.value;
+    console.log(capturado);
+    cargarProductos(capturado);
+})
 
 //Control de las secciones
 const validarSesion = () => {
@@ -76,19 +73,59 @@ const listar = async () => {
 
 
 const cargarProductos = async (categoria) => {
-    // Crear un fragmento de documento
-    const fragmento = document.createDocumentFragment(); // Usa 'document' si 'dom' no es necesario
-
     // Realizar la solicitud para obtener los datos del rol
     const dataProductos = await solicitud(producto);
+    const dataCategorias = await solicitud(categorias);
+    const dataProveedores = await solicitud(proveedores);
+    const $tbody = dom.createElement('tbody');
+    $tbody.setAttribute("id", "idLimpiar");
+    $tbody.removeChild();
 
-    console.log(dataProductos)
-
-    const arrayProductoSeleccionado = [];
     dataProductos.forEach((element) => {
         if( element.categoria == categoria ){
-            arrayProductoSeleccionado.push = element;
-            console.log(element)
+            console.log(element);
+            const fila = dom.createElement('tr');
+
+        const celda1 = dom.createElement('td');
+        celda1.textContent = element.id;
+        fila.appendChild(celda1);
+
+        const celda2 = dom.createElement('td');
+        celda2.textContent = element.nombre;
+        fila.appendChild(celda2);
+
+        const celda3 = dom.createElement('td');
+        celda3.textContent = element.precioVenta;
+        fila.appendChild(celda3);
+
+        const celda4 = dom.createElement('td');
+        celda4.textContent = element.precioCompra;
+        fila.appendChild(celda4);
+
+        const celda5 = dom.createElement('td');
+        celda5.textContent = element.stock;
+        fila.appendChild(celda5);
+
+        const celda6 = dom.createElement('td');
+        const categoria = dataCategorias.find(c => c.id === element.categoria);
+        celda6.textContent = categoria ? categoria.nombre : "Sin categoría";
+        fila.appendChild(celda6);
+
+        const celda7 = dom.createElement('td');
+        const proveedor = dataProveedores.find(p => p.id === element.proveedor);
+        celda7.textContent = proveedor ? proveedor.nombre : "Sin proveedor";
+        fila.appendChild(celda7);
+
+        console.log(proveedor);
+        // Agregar la fila al fragmento
+        $fragmento.appendChild(fila);
         }
     })
+    $tbody.appendChild($fragmento)
+
+    $table.appendChild($tbody)
+}
+
+const limpiar = () => {
+    
 }

@@ -69,7 +69,7 @@ const listar = async () => {
         fila.appendChild(celda6);
 
         const celda7 = dom.createElement('td');
-        const rolUsuario = dataRoles.find(r => r.id === element.rol);
+        const rolUsuario = dataRoles.find(r => r.id == element.rol);
         celda7.textContent = rolUsuario ? rolUsuario.name : "Sin rol";
         fila.appendChild(celda7);
 

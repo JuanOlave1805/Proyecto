@@ -47,6 +47,7 @@ formulario.addEventListener("submit", async (event) => {
         alert("Contraseña incorrecta.");
         return;
     }
+    console.log(usuarioEncontrado.rol)
 
     if(usuarioEncontrado.estado !== "ACTIVO"){
         alert("Usuario Inactivo")
@@ -56,15 +57,12 @@ formulario.addEventListener("submit", async (event) => {
     localStorage.setItem("usuarioActivo", JSON.stringify(usuarioEncontrado));
 
     // Validar el rol y redirigir según corresponda
-    if (usuarioEncontrado.rol == 2) {
+    if (usuarioEncontrado.rol == "2") {
         window.location.href = "../venta/ventaAdmin.html";
 
-    } else if (usuarioEncontrado.rol == 1) { 
+    } else if (usuarioEncontrado.rol == "1") { 
         console.log("hola") 
         window.location.href = "";
-    } else{
-        console.log("fallo");
-        
     }
 });
 

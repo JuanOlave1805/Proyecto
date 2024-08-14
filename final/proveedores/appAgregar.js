@@ -3,7 +3,8 @@ import { default as numeros } from '../Modulos JS/moduloSoloNumeros.js';
 import { default as validateTextInput } from '../Modulos JS/moduloSoloLetras.js';
 import { default as validateEmail } from '../Modulos JS/correo.js';
 import agregarDato from '../Modulos JS/agregar.js';
-import { rol, usuario } from "../Modulos JS/config.js";
+import { proveedores } from "../Modulos JS/config.js";
+import solicitud from "../Modulos JS/listar.js";
 
 // id html
 const dom = document;
@@ -14,9 +15,13 @@ const $inputEncargado = dom.querySelector("#nombreUsuario");
 const $checkbox = document.querySelector('#terminos');
 const $Button = document.querySelector('#button');
 const $formulario = dom.querySelector('#registroForm');
-const $table = dom.querySelector("#registroForm")
+const $table = dom.querySelector("#table")
 
 // Eventos
+document.addEventListener("DOMContentLoaded", function() {
+    validarSesion();
+    listar();
+});
 
 document.getElementById('menuIcon').addEventListener('click', function() {
     const botonera = document.getElementById('botonera');
@@ -55,6 +60,20 @@ $formulario.addEventListener('submit', async (event) => {
     }
 });
 
+//Control de las secciones
+const validarSesion = () => {
+    const usuarioActivo = localStorage.getItem("usuarioActivo");
+
+    if (!usuarioActivo) {
+        // Redirigir al login si no hay sesión activa
+        window.location.href = "../inicio/inicio.html";
+    } else {
+        // Si hay sesión activa, convertir el string almacenado a un objeto
+        const usuario = JSON.parse(usuarioActivo);
+        console.log(usuario.id);
+    }
+};
+
 // Funciones
 
 const save = async () => {
@@ -71,7 +90,7 @@ const save = async () => {
 
     if (ok) {
         try {
-            const resultado = await agregarDato(usuario, data);
+            const resultado = await agregarDato(proveedores, data);
             console.log('Resultado:', resultado); // Maneja el resultado
 
             // Mostrar un alert de éxito
@@ -124,10 +143,49 @@ const agregarFila = (data) => {
     fragmento.appendChild(fila);
 
     // Agregar el fragmento al tbody
-    const tbody = dom.querySelector('tbody');
+    const tbody = dom
+    .querySelector('tbody');
     if (tbody) {
         tbody.appendChild(fragmento);
     } else {
         console.error("No se encontró el tbody en la tabla.");
     }
+};
+
+const listar = async () => {
+    const fragmento = dom.createDocumentFragment();
+    const dataproveedores = await solicitud(proveedores);
+
+    // Crear el tbody
+    const tbody = dom.createElement('tbody');
+
+    dataproveedores.forEach((element) => {
+        // Crear una nueva fila
+        const fila = dom.createElement('tr');
+
+        // Crear y agregar las celdas con los datos
+        const celda1 = dom.createElement('td');
+        celda1.textContent = element.nombre;
+        fila.appendChild(celda1);
+
+        const celda2 = dom.createElement('td');
+        celda2.textContent = element.contactoNombre;
+        fila.appendChild(celda2);
+
+        const celda3 = dom.createElement('td');
+        celda3.textContent = element.correo;
+        fila.appendChild(celda3);
+
+        const celda4 = dom.createElement('td');
+        celda4.textContent = element.telefono;
+        fila.appendChild(celda4);
+
+        // Agregar la fila al fragmento
+        fragmento.appendChild(fila);
+    });
+
+    // Agregar el fragmento al tbody
+    tbody.appendChild(fragmento);
+
+    $table.appendChild(tbody);
 };

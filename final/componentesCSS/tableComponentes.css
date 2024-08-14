@@ -4,14 +4,11 @@ html{
     font-size: 14px;
 }
 .table {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    width: auto;
     border-collapse: collapse;
     font-family: "Oswald", sans-serif;
-    font-size: clamp(10px, 2vw, 1rem);
+    font-size: clamp(6px, 2vw, 1rem);
     width: 80%;
+    margin: 0 auto;
 }
 
 .tableHead {
@@ -20,7 +17,7 @@ html{
 }
 
 .tableHead th {
-    padding: 10px;
+    padding: clamp(2px, 1vw, 10px);
     text-align: left; /* Alineación del texto */
     border-bottom: 2px solid #ddd; /* Línea inferior */
     font-weight: bold; /* Texto en negrita */
@@ -44,10 +41,16 @@ tbody{
 tbody > tr{
     height: 25px;
 }
+.contenedor{
+    width: 100%;
+    padding: 0;
+}
 
-@media (max-width: 768px) {
-    .table{
-        width: 94%;
-        left: 3%;
+@media (max-width: 500px) {
+    .table {
+        width: 98%;
+        border-collapse: collapse; /* Elimina espacios entre celdas */
+        overflow-x: auto; /* Habilita el desplazamiento horizontal si es necesario */
+        margin: 0 auto ;   
     }
 }

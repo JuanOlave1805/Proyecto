@@ -33,6 +33,10 @@ h3 {
     border-radius: 4px;
 }
 
+.form-group input[readonly]{
+    color: gray;
+} 
+
 .checkbox-group {
     display: flex;
     align-items: center;

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Actualizar Proveedor BIKE LIFE</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Categoria BIKE LIFE</title>
 </head>
 <body>
     <header>
         <div>
-            <img src="../Imagenes/logo.png" alt="" class="imgLogo">
+            <img src="../../Imagenes/logo.png" alt="" class="imgLogo">
             <h2>BIKE LIFE</h2>
             <!-- Icono de menú hamburguesa -->
             <div id="menuIcon" class="menu-icon">
@@ -21,28 +21,28 @@
         <article>
             <aside id="botonera">
                 <div>
-                    <a href="../venta/ventaAdmin.html" class="btnSinEtiqueta btnPrimary">Ventas</a>
-                    <a href="../reparacion/reparacionAdmin.html" class="btnPrimary btnSinEtiqueta">Reparaciones</a>
-                    <a href="../productos/productosAdmin.html" class="btnPrimary btnSinEtiqueta ">Productos</a>
-                    <a href="../usuarios/usuariosAdmin.html" class="btnPrimary btnSinEtiqueta ">Usuarios</a>
-                    <a href="proveedoresAdmin.html" class="btnPrimary btnSinEtiqueta btnPrimaryUsado">Proveedores</a>
+                    <a href="../../venta/ventaAdmin.html" class="btnSinEtiqueta btnPrimary">Ventas</a>
+                    <a href="../../reparacion/reparacionAdmin.html" class="btnPrimary btnSinEtiqueta">Reparaciones</a>
+                    <a href="../../productos/productosAdmin.html" class="btnPrimary btnSinEtiqueta btnPrimaryUsado">Productos</a>
+                    <a href="../../usuarios/usuariosAdmin.html" class="btnPrimary btnSinEtiqueta">Usuarios</a>
+                    <a href="../../proveedores/proveedoresAdmin.html" class="btnPrimary btnSinEtiqueta">Proveedores</a>
                 </div>
                 <div>
-                    <a href="../perfil/perfilAdmin.html" class="btnPrimary btnSinEtiqueta">Perfil</a>
+                    <a href="../../perfil/perfilAdmin.html" class="btnPrimary btnSinEtiqueta">Perfil</a>
                 </div>
             </aside>
             <section class="sectionTable">
                 <article>
                     <div>
-                        <h2>Actualizar Proveedores</h2>
+                        <h2>Eliminar Categoria</h2>
                     </div>
                     <div>
-                        <a href="proveedoresAdmin.html" class="btnPrimary btnSinEtiqueta btnRojo">Cancelar</a>
+                        <a href="categoriaAdmin.html" class="btnPrimary btnSinEtiqueta btnCeleste">Cancelar</a>
                     </div>
                 </article>
                 <article class= "contenedor">
                     <div class="fomularioDiv">
-                        <h3>Formulario de Registro</h3>
+                        <h3>Formulario de Eliminar</h3>
                         <form id="registroForm">
                             <div class="form-group">
                                 <label for="id">ID Proveedor:</label>
@@ -52,24 +52,12 @@
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" id="nombre" name="nombre" required>
                             </div>
-                            <div class="form-group">
-                                <label for="nombreUsuario">Nombre de Encargado:</label>
-                                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefono">Teléfono:</label>
-                                <input type="tel" id="telefono" name="telefono" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="correo">Correo Electrónico:</label>
-                                <input type="email" id="correo" name="correo" required>
-                            </div>
                             <div class="form-group checkbox-group">
                                 <input type="checkbox" id="terminos" name="terminos" required>
                                 <label for="terminos">Acepto términos y condiciones</label>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btnPrimary btnCeleste width100" id="button">Actualizar</button>
+                                <button type="submit" class="btnPrimary btnRojo width100" id="button">Eliminar</button>
                             </div>
                         </form>
                     </div>
@@ -77,9 +65,6 @@
                         <thead class="tableHead">
                             <th class="">id</th>
                             <th class="">Nombre</th>
-                            <th class="">Nombre contacto</th>
-                            <th class="">Correo</th>
-                            <th class="">Telefono</th>
                         </thead>
                     </table>
                 </article>

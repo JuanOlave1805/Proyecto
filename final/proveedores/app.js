@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
     listar();
 });
 
+document.getElementById('menuIcon').addEventListener('click', function() {
+    const botonera = document.getElementById('botonera');
+    botonera.classList.toggle('active');
+});
+
 const listar = async () => {
     const fragmento = dom.createDocumentFragment();
     const dataproveedores = await solicitud(proveedores);

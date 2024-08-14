@@ -23,12 +23,10 @@ const $formulario = dom.querySelector('#registroForm');
 
 // Eventos
 
-document.getElementById('menuIcon').addEventListener('click', function() {
-    const botonera = document.getElementById('botonera');
-    botonera.classList.toggle('active');
-});
-
 $inputID.addEventListener("keyup", (event) => {
+    numeros(event, event.target);
+});
+$inputID.addEventListener("keypress", (event) => {
     numeros(event, event.target);
 });
 $inputNombre.addEventListener("input", (event) => {
@@ -40,10 +38,16 @@ $inputApellido.addEventListener("input", (event) => {
 $inputEdad.addEventListener("keypress", (event) => {
     numerosEdad(event, event.target);
 });
+$inputEdad.addEventListener("keyup", (event) => {
+    numerosEdad(event, event.target);
+});
 $inputCorreo.addEventListener("input", (event) => {
     validateEmail(event.target);
 });
 $inputTelefono.addEventListener("keypress", (event) => {
+    numeros(event, event.target);
+});
+$inputTelefono.addEventListener("keyup", (event) => {
     numeros(event, event.target);
 });
 

@@ -19,7 +19,7 @@
       "telefono": "3229126084",
       "rol": "2",
       "estado": "ACTIVO",
-      "contrasena": "12345"
+      "contrasena": "123456"
     }
   ],
   "reportes": [
@@ -57,6 +57,24 @@
       "stock": "10",
       "categoria": "1",
       "proveedor": "1"
+    },
+    {
+      "id": "8c02",
+      "nombre": "CORAZA KENDA RIN 26",
+      "precioVenta": "2000",
+      "precioCompra": "1000",
+      "stock": "10",
+      "categoria": "7ec5",
+      "proveedor": "5d55"
+    },
+    {
+      "id": "d142",
+      "nombre": "CORAZA KENDA RIN 27",
+      "precioVenta": "2000",
+      "precioCompra": "1000",
+      "stock": "10",
+      "categoria": "7ec5",
+      "proveedor": "c7c1"
     }
   ],
   "pedidos": [
@@ -86,8 +104,8 @@
   ],
   "categorias": [
     {
-      "id": "1",
-      "nombre": "LLANTA PISTA"
+      "id": "7ec5",
+      "nombre": "LLANTA "
     }
   ]
 }

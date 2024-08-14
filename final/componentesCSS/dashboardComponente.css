@@ -54,9 +54,9 @@ header > div > img {
 main {
     padding: 10px;
     background: black;
-    height: auto;
+    height: 100%;
     width: 100%;
-    height: 90vh;
+    height: auto;
     display: flex;
     justify-content: center;
 }
@@ -113,11 +113,15 @@ h2 {
     height: 100%;
     position: relative;
     width: 100%;
+    padding: 20px 0;
     background-color: var(--celeste-fondo);
 }
 
-/* Media query para tablets (pantallas de 768px o menos) */
-@media (max-width: 768px) {
+.contenedor{
+    padding: 0 10px;
+}
+
+@media (max-width: 1050px) {
     header > div {
         flex-direction: row;
         align-items: center;
@@ -148,6 +152,12 @@ h2 {
     main > article {
         grid-template-areas: "pagina pagina pagina pagina pagina pagina";
         grid-template-columns: 1fr;
+        display: flex;
+    }
+
+    .contenedor{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 

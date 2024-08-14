@@ -20,6 +20,10 @@ document.getElementById('menuIcon').addEventListener('click', function() {
     botonera.classList.toggle('active');
 });
 
+document.getElementById('cerrar').addEventListener('click', function() {
+    cerrarSesion();
+});
+
 
 //Control de las secciones
 const validarSesion = () => {
@@ -33,6 +37,13 @@ const validarSesion = () => {
         const usuario = JSON.parse(usuarioActivo);
         console.log(usuario.id);
     }
+};
+const cerrarSesion = () => {
+    // Eliminar el usuario activo del localStorage
+    localStorage.removeItem("usuarioActivo");
+
+    // Redirigir al login
+    window.location.href = "../inicio/inicio.html";
 };
 
 const listar = () => {

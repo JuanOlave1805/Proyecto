@@ -51,12 +51,12 @@
   "producto": [
     {
       "id": "1",
-      "nombre": "Rin 27",
-      "precioCompra": "100",
+      "nombre": "RIN 27",
       "precioVenta": "120",
+      "precioCompra": "100",
       "stock": "10",
-      "categoria": "1",
-      "proveedor": "1"
+      "categoria": "d7be",
+      "proveedor": "c7c1"
     },
     {
       "id": "8c02",
@@ -106,6 +106,14 @@
     {
       "id": "7ec5",
       "nombre": "LLANTA "
+    },
+    {
+      "id": "d7be",
+      "nombre": "RIN ALUMINIO"
+    },
+    {
+      "id": "0237",
+      "nombre": "NEUMATICO "
     }
   ]
 }

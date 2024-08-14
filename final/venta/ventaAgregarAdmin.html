@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Venta BIKE LIFE</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../Imagenes/logo.png" alt="" class="imgLogo">
+            <h2>BIKE LIFE</h2>
+            <!-- Icono de menú hamburguesa -->
+            <div id="menuIcon" class="menu-icon">
+                &#9776;
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <aside id="botonera">
+                <div>
+                    <a href="ventaAdmin.html" class="btnSinEtiqueta btnPrimaryUsado">Ventas</a>
+                    <a href="../reparacion/reparacionAdmin.html" class="btnPrimary btnSinEtiqueta">Reparaciones</a>
+                    <a href="../productos/productosAdmin.html" class="btnPrimary btnSinEtiqueta">Productos</a>
+                    <a href="../usuarios/usuariosAdmin.html" class="btnPrimary btnSinEtiqueta">Usuarios</a>
+                    <a href="../proveedores/proveedoresAdmin.html" class="btnPrimary btnSinEtiqueta">Proveedores</a>
+                </div>
+                <div>
+                    <a href="../perfil/perfilAdmin.html" class="btnPrimary btnSinEtiqueta">Perfil</a>
+                </div>
+            </aside>
+            <section class="sectionTable">
+                <article>
+                    <div>
+                        <h2>Agregar Venta</h2>
+                    </div>
+                    <div>
+                        <a href="" class="btnPrimary btnSinEtiqueta btnRojo">Cancelar</a>
+                    </div>
+                </article>
+                <article>
+                    <section>
+                        <select name="categoria" id="categoria">
+                            <option value="0">Seleccionar</option>
+                        </select>
+                    </section>
+                    <table class="table" id="table"> 
+                        <thead class="tableHead">
+                            <th class="">Nombre</th>
+                            <th class="">Precio Venta</th>
+                            <th class="">Precio Compra</th>
+                            <th class="">Stock</th>
+                            <th class="">Categoria</th>
+                            <th class="">Proveedor</th>
+    
+                        </thead>
+                    </table>
+                </article>
+            </section>
+        </article>
+    </main> 
+    <script src="appAgregar.js" type="module"></script>
+</body>
+</html>

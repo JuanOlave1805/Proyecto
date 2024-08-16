@@ -100,7 +100,7 @@ section > article {
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 h2 {
@@ -110,15 +110,16 @@ h2 {
 }
 
 .sectionTable {
-    height: 80vh;
-    position: relative;
+    min-height: 800px;
+    height: auto;
     width: 100%;
     padding: 20px 0;
     background-color: var(--celeste-fondo);
 }
 
 .contenedor{
-    padding: 0 10px;
+    display: flex;
+    align-items: start;
 }
 
 @media (max-width: 1600px){

@@ -1,19 +1,10 @@
 @import url('../componentesCSS/dashboardComponente.css');
 @import url('../componentesCSS/formularioComponente.css');
+@import url('../componentesCSS/tableComponentes.css');
 
 .contenedor{
     width: 100%;
     height: auto ;
-    grid-template-areas: "formulario tabla";
-    grid-template-columns: 1fr 1fr;
-}
-.fomularioDiv{
-    grid-area: "formulario";
-}
-.tableProveedor{
-    grid-area: "tabla";
-    width: 60vw;
-    left: 25%;
 }
 .width100{
     width: 100%;

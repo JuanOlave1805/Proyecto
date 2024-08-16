@@ -1,18 +1,22 @@
-.form-container {
+.fomularioDiv{
+    width: 35%;
+    min-height: 300px;
+    height: auto;
+    padding: 0 10px;
+}
+.tableDiv{
+    width: 100%;
+    height: clamp(300px, 80vh, 680px);
+    scroll-behavior: smooth;
+}
+/* .form-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-}
-
-h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-family: "Oswald", sans-serif;
-}
+} */
 
 .form-group {
     margin-bottom: 15px;

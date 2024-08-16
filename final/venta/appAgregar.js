@@ -5,6 +5,7 @@ const dom = document;
 const $table = dom.querySelector("#table");
 const $selectCategoria = dom.querySelector("#categoria")
 const $fragmento = document.createDocumentFragment();
+const $tbody = document.querySelector("#tbody");
 
 // Eventos
 document.addEventListener("DOMContentLoaded", function() {
@@ -77,9 +78,7 @@ const cargarProductos = async (categoria) => {
     const dataProductos = await solicitud(producto);
     const dataCategorias = await solicitud(categorias);
     const dataProveedores = await solicitud(proveedores);
-    const $tbody = dom.createElement('tbody');
-    $tbody.setAttribute("id", "idLimpiar");
-    $tbody.removeChild();
+    $tbody.innerHTML="";
 
     dataProductos.forEach((element) => {
         if( element.categoria == categoria ){

@@ -284,6 +284,7 @@ const listar = async () => {
 
     // Crear el tbody
     const tbody = dom.createElement('tbody');
+    tbody.classList.add('tableBody')
 
     dataUsuarios.forEach((element) => {
         // Crear una nueva fila

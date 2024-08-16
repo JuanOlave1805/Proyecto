@@ -4,21 +4,10 @@
 .contenedor{
     width: 100%;
     height: auto ;
-    grid-template-areas: "formulario tabla";
-    grid-template-columns: 1fr 1fr;
-}
-.fomularioDiv{
-    grid-area: "formulario";
-}
-.tableProveedor{
-    grid-area: "tabla";
-    width: 60vw;
-    left: 25%;
 }
 .width100{
     width: 100%;
 }
-
 /* Estilos para el combobox */
 .form-group select {
     width: 100%;

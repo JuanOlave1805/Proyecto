@@ -20,6 +20,97 @@
       "rol": "2",
       "estado": "ACTIVO",
       "contrasena": "123456"
+    },
+    {
+      "id": "1232222222",
+      "nombre": "kiriku",
+      "apellido": "ola",
+      "edad": "12",
+      "correo": "correo@correo.com",
+      "telefono": "3265984646",
+      "rol": "2",
+      "estado": "INACTIVO",
+      "contrasena": "123456"
+    },
+    {
+      "id": "123222221",
+      "nombre": "neumatico ",
+      "apellido": "ola",
+      "edad": "12",
+      "correo": "correo@correo.com",
+      "telefono": "3265984646",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "5456465454",
+      "nombre": "Juan  ",
+      "apellido": "Crack  ",
+      "edad": "18",
+      "correo": "olavejuan@gmail.com",
+      "telefono": "3266665954",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "1232222228",
+      "nombre": "asdasdsad",
+      "apellido": "asdasdasd",
+      "edad": "12",
+      "correo": "aasd@correo.com",
+      "telefono": "3266544841",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "1232222223",
+      "nombre": "neumatico ",
+      "apellido": "Crack  ",
+      "edad": "12",
+      "correo": "correo@correo.com",
+      "telefono": "3265984646",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "2263265648",
+      "nombre": "juann",
+      "apellido": "olave",
+      "edad": "12",
+      "correo": "allla@correo.com",
+      "telefono": "3265414848",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "1232222225",
+      "nombre": "neumatico ",
+      "apellido": "ola",
+      "edad": "12",
+      "correo": "correo@correo.com",
+      "telefono": "3265984646",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "1232222266",
+      "nombre": "neumatico ",
+      "apellido": "ola",
+      "edad": "12",
+      "correo": "olavejuan@gmail.com",
+      "telefono": "3265984646",
+      "rol": "1",
+      "estado": "INACTIVO"
+    },
+    {
+      "id": "1232222268",
+      "nombre": "RIN ",
+      "apellido": "ola",
+      "edad": "12",
+      "correo": "correo@correo.com",
+      "telefono": "3265984646",
+      "rol": "1",
+      "estado": "INACTIVO"
     }
   ],
   "reportes": [
@@ -52,8 +143,8 @@
     {
       "id": "1",
       "nombre": "RIN 27",
-      "precioVenta": "120",
-      "precioCompra": "100",
+      "precioVenta": "1200",
+      "precioCompra": "1000",
       "stock": "10",
       "categoria": "d7be",
       "proveedor": "c7c1"
@@ -75,6 +166,15 @@
       "stock": "10",
       "categoria": "7ec5",
       "proveedor": "c7c1"
+    },
+    {
+      "id": "abbb",
+      "nombre": "RIN 26",
+      "precioVenta": "2000",
+      "precioCompra": "1000",
+      "stock": "10",
+      "categoria": "d7be",
+      "proveedor": "5d55"
     }
   ],
   "pedidos": [

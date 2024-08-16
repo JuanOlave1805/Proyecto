@@ -1,4 +1,5 @@
 @import url('../componentesCSS/dashboardComponente.css');
+@import url('../componentesCSS/tableComponentes.css');
 
 /* Estilos para el combobox */
 select {
@@ -24,4 +25,9 @@ select:focus {
 select > option {
     padding: 10px;
     color: #333;
+}
+.articleTable{
+    max-height: 1200px;
+    display: flex;
+    align-items: start;
 }

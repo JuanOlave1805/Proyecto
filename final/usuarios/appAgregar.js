@@ -146,9 +146,11 @@ function toggleButtonState() {
     $Button.disabled = !$checkbox.checked; // Habilita o deshabilita el botón según el estado del checkbox
 }
 
-const agregarFila = (data) => {
+const agregarFila = async (data) => {
+    const datarol = await solicitud(rol);
     // Crear una nueva fila
     const fila = dom.createElement('tr');
+    
 
     // Crear y agregar las celdas con los datos
     const celda1 = dom.createElement('td');
@@ -176,7 +178,8 @@ const agregarFila = (data) => {
     fila.appendChild(celda6);
 
     const celda7 = dom.createElement('td');
-    celda7.textContent = data.rol; // Añadido el rol
+    const roll = datarol.find(r => r.id === data.rol);
+    celda7.textContent = roll ? roll.name  : "Sin Rol"; // Añadido el rol
     fila.appendChild(celda7);
 
     const celda8 = dom.createElement('td');

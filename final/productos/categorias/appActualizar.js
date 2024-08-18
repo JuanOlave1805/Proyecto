@@ -47,7 +47,7 @@ const validarSesion = () => {
 
     if (!usuarioActivo) {
         // Redirigir al login si no hay sesión activa
-        window.location.href = "../inicio/inicio.html";
+        window.location.href = "../../inicio/inicio.html";
     } else {
         // Si hay sesión activa, convertir el string almacenado a un objeto
         const usuario = JSON.parse(usuarioActivo);
@@ -118,6 +118,7 @@ const actualizar = async () => {
             // Limpiar los campos del formulario
             $inputID.value = "";
             $inputNombre.value = "";
+            $checkbox.checked = false;
         } else {
             alert("Error al actualizar el proveedor.");
         }

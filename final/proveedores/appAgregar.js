@@ -78,7 +78,7 @@ const validarSesion = () => {
 
 const save = async () => {
     // Verifica la validez del formulario
-    let ok = validar("#formulario [required]"); // Llama a la función validar
+    let ok = validar("#registroForm"); // Llama a la función validar
 
     // Captura todos los atributos
     const data = {
@@ -101,6 +101,7 @@ const save = async () => {
             $inputEncargado.value = "";
             $inputCorreo.value = "";
             $inputTelefono.value = "";
+            $checkbox.checked = false;
 
             // Agregar la nueva fila a la tabla
             agregarFila(data); // Actualiza la tabla con el nuevo dato

@@ -272,6 +272,7 @@ const actualizar = async () => {
             $stock.value = "";
             $selectCategoria.selectedIndex = 0;
             $selectProveedor.selectedIndex = 0;
+            $checkbox.checked = false;
         } else {
             alert("Error al actualizar el producto.");
         }

@@ -20,97 +20,6 @@
       "rol": "2",
       "estado": "ACTIVO",
       "contrasena": "123456"
-    },
-    {
-      "id": "1232222222",
-      "nombre": "kiriku",
-      "apellido": "ola",
-      "edad": "12",
-      "correo": "correo@correo.com",
-      "telefono": "3265984646",
-      "rol": "2",
-      "estado": "INACTIVO",
-      "contrasena": "123456"
-    },
-    {
-      "id": "123222221",
-      "nombre": "neumatico ",
-      "apellido": "ola",
-      "edad": "12",
-      "correo": "correo@correo.com",
-      "telefono": "3265984646",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "5456465454",
-      "nombre": "Juan  ",
-      "apellido": "Crack  ",
-      "edad": "18",
-      "correo": "olavejuan@gmail.com",
-      "telefono": "3266665954",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "1232222228",
-      "nombre": "asdasdsad",
-      "apellido": "asdasdasd",
-      "edad": "12",
-      "correo": "aasd@correo.com",
-      "telefono": "3266544841",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "1232222223",
-      "nombre": "neumatico ",
-      "apellido": "Crack  ",
-      "edad": "12",
-      "correo": "correo@correo.com",
-      "telefono": "3265984646",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "2263265648",
-      "nombre": "juann",
-      "apellido": "olave",
-      "edad": "12",
-      "correo": "allla@correo.com",
-      "telefono": "3265414848",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "1232222225",
-      "nombre": "neumatico ",
-      "apellido": "ola",
-      "edad": "12",
-      "correo": "correo@correo.com",
-      "telefono": "3265984646",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "1232222266",
-      "nombre": "neumatico ",
-      "apellido": "ola",
-      "edad": "12",
-      "correo": "olavejuan@gmail.com",
-      "telefono": "3265984646",
-      "rol": "1",
-      "estado": "INACTIVO"
-    },
-    {
-      "id": "1232222268",
-      "nombre": "RIN ",
-      "apellido": "ola",
-      "edad": "12",
-      "correo": "correo@correo.com",
-      "telefono": "3265984646",
-      "rol": "1",
-      "estado": "INACTIVO"
     }
   ],
   "reportes": [
@@ -129,14 +38,16 @@
       "nombre": "SPECIALIZED",
       "contactoNombre": "Pepito Perez",
       "correo": "correo@correo.com",
-      "telefono": "3226126084"
+      "telefono": "3229126084",
+      "userId": "c7c1"
     },
     {
       "id": "5d55",
       "nombre": "PIRINEOS",
       "contactoNombre": "Jose Piojo",
       "correo": "correo@correo.com",
-      "telefono": "3221111111"
+      "telefono": "3229126000",
+      "userId": "5d55"
     }
   ],
   "producto": [

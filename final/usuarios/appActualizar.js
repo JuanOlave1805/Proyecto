@@ -185,7 +185,7 @@ const seleccionarFila = ($table, inputs) => {
 
 const actualizar = async () => {
     // Verifica la validez del formulario
-    const ok = validar("#formulario [required]");
+    const ok = validar("#registroForm");
 
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");
@@ -238,6 +238,20 @@ const actualizar = async () => {
         alert("Ocurrió un error al intentar actualizar el usuario.");
     }
 };
+
+//Seleccion de opcion
+document.querySelectorAll('select').forEach(select => {
+    select.addEventListener('change', () => {
+        if (select.value.trim() === "") {
+            // Si no hay opción seleccionada, poner borde rojo
+            select.style.border = '2px solid red';
+        } else {
+            // Si hay una opción seleccionada, poner borde verde
+            select.style.border = '2px solid green';
+        }
+    });
+});
+
 
 const actualizarFilaEnTabla = (data, dataRoles) => {
     // Busca la fila correspondiente en la tabla usando el ID

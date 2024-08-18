@@ -187,6 +187,7 @@ const save = async () => {
             $stock.value = "";
             $selectCategoria.selectedIndex = 0; 
             $selectProveedor.selectedIndex = 0;
+            $checkbox.checked = false;
 
             // Agregar la nueva fila a la tabla
             agregarFila(data);

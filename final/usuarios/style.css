@@ -33,3 +33,13 @@
     padding: 10px;
     color: #333;
 }
+
+/* Cambiar el borde a verde cuando el select tiene una opción válida seleccionada */
+.form-group select:valid {
+    border-color: #4CAF50;
+}
+
+/* Asegurarse de que el borde no cambie si el select está en el estado inicial (opción desactivada seleccionada) */
+.form-group select:invalid {
+    border-color: #ccc;
+}

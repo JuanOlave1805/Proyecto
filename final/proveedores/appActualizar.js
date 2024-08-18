@@ -80,7 +80,7 @@ const validarSesion = () => {
 // Funciones
 const actualizar = async () => {
     // Verifica la validez del formulario
-    let ok = validar("#formulario [required]");
+    let ok = validar("#registroForm");
 
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");
@@ -114,6 +114,7 @@ const actualizar = async () => {
             $inputEncargado.value = "";
             $inputCorreo.value = "";
             $inputTelefono.value = "";
+            $checkbox.checked = false;
         } else {
             alert("Error al actualizar el proveedor.");
         }

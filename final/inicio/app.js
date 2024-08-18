@@ -17,17 +17,19 @@ $inputUsuario.addEventListener("keypress", (event) => {
 const dom = document;
 const formulario = dom.querySelector("#formulario");
 const inputUsuario = dom.querySelector("#username");
-const inputContraseña = dom.querySelector("#password");
+const inputContrasena = dom.querySelector("#password");
 
 formulario.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const nombreUsuario = inputUsuario.value.trim();
-    const contraseña = inputContraseña.value.trim();
+    const contrasena = inputContrasena.value.trim();
 
     // Validación de campos vacíos
-    if (!nombreUsuario || !contraseña) {
+    if (!nombreUsuario || !contrasena) {
         alert("Por favor, ingrese la identificacion de usuario y la contraseña.");
+        inputUsuario.style.border = '2px red solid ';
+        inputContrasena.style.border = '2px red solid ';
         return;
     }
 
@@ -43,7 +45,7 @@ formulario.addEventListener("submit", async (event) => {
     }
 
     // Validar la contraseña
-    if (usuarioEncontrado.contrasena !== contraseña) {
+    if (usuarioEncontrado.contrasena !== contrasena) {
         alert("Contraseña incorrecta.");
         return;
     }
@@ -66,3 +68,7 @@ formulario.addEventListener("submit", async (event) => {
     }
 });
 
+inputContrasena.addEventListener('input', () => {
+    // Cambia el color del borde a verde
+    inputContrasena.style.borderColor = 'green';
+});

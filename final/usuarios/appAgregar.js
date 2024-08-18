@@ -59,8 +59,16 @@ $checkbox.addEventListener('change', toggleButtonState);
 $formulario.addEventListener('submit', async (event) => {
     event.preventDefault(); // Evita la recarga de la página
 
+    // Verifica la validez del formulario
+    let ok = validar("#registroForm"); // Llama a la función validar
+    
+    if (!ok) {
+        alert("Por favor, complete todos los campos requeridos.");
+        return; // Salir de la función si hay campos vacíos
+    }
+
     try {
-        await save();
+        await save(); // Llama a la función save para manejar el envío de datos
     } catch (error) {
         console.error('Error al guardar los datos:', error); // Maneja el error
     }
@@ -69,56 +77,66 @@ $formulario.addEventListener('submit', async (event) => {
 // Funciones
 
 const save = async () => {
-    // Verifica la validez del formulario
-    let ok = validar("#formulario [required]"); // Llama a la función validar
 
     // Captura todos los atributos
     const data = {
-        id: $inputID.value, // Captura el ID si es necesario
+        id: $inputID.value,
         nombre: $inputNombre.value,
-        apellido: $inputApellido.value, // Se ajustó para usar apellido en lugar de encargado
-        edad: $inputEdad.value, // Se añadió el campo edad
+        apellido: $inputApellido.value, 
+        edad: $inputEdad.value,
         correo: $inputCorreo.value,
         telefono: $inputTelefono.value,
-        rol: $selectRol.value, // Captura el valor del select rol
-        estado: $selectEstado.value // Captura el valor del select estado
+        rol: $selectRol.value,
+        estado: $selectEstado.value
     };
 
-    if (ok) {
-        try {
-            // Verificar si el ID ya existe
-            const existeID = await verificarID(data.id);
+    try {
+        // Verificar si el ID ya existe
+        const existeID = await verificarID(data.id);
 
-            if (existeID) {
-                alert("Usuario ya registrado");
-                return; // Salir de la función si el ID ya existe
-            }
-
-            // Si el ID no existe, proceder a agregar el dato
-            const resultado = await agregarDato(usuario, data); // Asumiendo que agregarDato es la función para enviar los datos
-            console.log('Resultado:', resultado); // Maneja el resultado
-
-            // Mostrar un alert de éxito
-            alert("Dato agregado exitosamente");
-
-            // Limpiar los campos del formulario
-            $inputID.value = "";
-            $inputNombre.value = "";
-            $inputApellido.value = "";
-            $inputEdad.value = "";
-            $inputCorreo.value = "";
-            $inputTelefono.value = "";
-            $selectRol.selectedIndex = 0; // Resetea el select rol
-            $selectEstado.selectedIndex = 0; // Resetea el select estado
-
-            // Agregar la nueva fila a la tabla
-            agregarFila(data); // Actualiza la tabla con el nuevo dato
-
-        } catch (error) {
-            console.error('Error al agregar el dato:', error);
+        if (existeID) {
+            alert("Usuario ya registrado");
+            return; // Salir de la función si el ID ya existe
         }
+
+        // Si el ID no existe, proceder a agregar el dato
+        const resultado = await agregarDato(usuario, data); // Asumiendo que agregarDato es la función para enviar los datos
+        console.log('Resultado:', resultado); // Maneja el resultado
+
+        // Mostrar un alert de éxito
+        alert("Dato agregado exitosamente");
+
+        // Limpiar los campos del formulario
+        $inputID.value = "";
+        $inputNombre.value = "";
+        $inputApellido.value = "";
+        $inputEdad.value = "";
+        $inputCorreo.value = "";
+        $inputTelefono.value = "";
+        $selectRol.selectedIndex = 0; // Resetea el select rol
+        $selectEstado.selectedIndex = 0; // Resetea el select estado
+        $checkbox.checked = false;
+
+        // Agregar la nueva fila a la tabla
+        agregarFila(data); // Actualiza la tabla con el nuevo dato
+
+    } catch (error) {
+        console.error('Error al agregar el dato:', error);
     }
 };
+
+//Seleccion de opcion
+document.querySelectorAll('select').forEach(select => {
+    select.addEventListener('change', () => {
+        if (select.value.trim() === "") {
+            // Si no hay opción seleccionada, poner borde rojo
+            select.style.border = '2px solid red';
+        } else {
+            // Si hay una opción seleccionada, poner borde verde
+            select.style.border = '2px solid green';
+        }
+    });
+});
 
 // Función para verificar si el ID ya existe
 const verificarID = async (id) => {

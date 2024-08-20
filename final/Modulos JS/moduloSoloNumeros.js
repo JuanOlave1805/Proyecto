@@ -156,6 +156,7 @@ export function numerosValores(event, elemento) {
             span.style.display = 'inline';
         } else {
             span.style.display = 'none';
+            elemento.style.border = '2px solid green';
         }
     }
 }

@@ -91,7 +91,7 @@ const listar = async () => {
 
 const actualizar = async () => {
     // Verifica la validez del formulario
-    let ok = validar("#formulario [required]");
+    let ok = validar("#registroForm");
 
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");

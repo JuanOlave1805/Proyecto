@@ -230,7 +230,7 @@ const seleccionarFila = ($table, inputs) => {
 
 
 const actualizar = async () => {
-    const ok = validar("#formulario [required]");
+    const ok = validar("#registroForm");
 
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");

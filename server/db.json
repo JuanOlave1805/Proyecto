@@ -86,6 +86,24 @@
       "stock": "10",
       "categoria": "d7be",
       "proveedor": "5d55"
+    },
+    {
+      "id": "d168",
+      "nombre": "",
+      "precioVenta": "",
+      "precioCompra": "",
+      "stock": "",
+      "categoria": "7ec5",
+      "proveedor": "c7c1"
+    },
+    {
+      "id": "f8b2",
+      "nombre": "RIN 29",
+      "precioVenta": "1200",
+      "precioCompra": "1000",
+      "stock": "10",
+      "categoria": "d7be",
+      "proveedor": "5d55"
     }
   ],
   "pedidos": [

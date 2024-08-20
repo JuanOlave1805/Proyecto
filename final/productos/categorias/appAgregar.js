@@ -86,7 +86,7 @@ const listar = async () => {
 
 const save = async () => {
     // Verifica la validez del formulario
-    let ok = validar("#formulario [required]"); // Llama a la función validar
+    let ok = validar("#registroForm"); // Llama a la función validar
 
     // Captura todos los atributos
     const data = {

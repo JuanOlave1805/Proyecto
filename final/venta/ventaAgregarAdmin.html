@@ -50,8 +50,7 @@
                         <thead class="tableHead">
                             <th class="">Identificación</th>
                             <th class="">Nombre</th>
-                            <th class="">Precio Venta</th>
-                            <th class="">Precio Compra</th>
+                            <th class="">Precio</th>
                             <th class="">Stock</th>
                             <th class="">Categoria</th>
                             <th class="">Proveedor</th>
@@ -60,7 +59,41 @@
                     </table>
                 </article>
                 <article>
-                    
+                    <div class="form-group">
+                        <label for="idProducto">ID Producto:</label>
+                        <input type="text" id="textProducto" name="idProducto" required disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Producto:</label>
+                        <input type="text" id="textNombre" name="nombre" required disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="text" id="textCantidad" name="cantidad" required>
+                    </div>
+                    <div class="botonera--Dos">
+                        <button class="btnCeleste btnPrimary" id="btnAgregarProducto">Agregar</button>
+                        <button class="btnRojo btnPrimary" id="btnRemoverProducto">Remover</button>
+                    </div>
+                </article>
+                <article class="articleTable articleTable--350px">
+                    <table class="tbody--auto " id="table2"> 
+                        <thead class="tableHead">
+                            <th class="">Identificación</th>
+                            <th class="">Nombre</th>
+                            <th class="">Precio Unidad</th>
+                            <th class="">Cantidad</th>
+                            <th class="">Categoria</th>
+                            <th class="">Proveedor</th>
+                        </thead>
+                        <tbody id="tbody2"></tbody>
+                    </table>
+                </article>
+                <article>
+                    <div class="botonera--Dos">
+                        <button class="btnCeleste btnPrimary" id="btnConfirmar">Confirmar compra</button>
+                        <a href="ventaAdmin.html" class="btnRojo btnPrimary">Cancelar</a>
+                    </div>
                 </article>
             </section>
         </article>

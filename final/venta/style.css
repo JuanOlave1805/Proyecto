@@ -1,5 +1,10 @@
 @import url('../componentesCSS/dashboardComponente.css');
 @import url('../componentesCSS/tableComponentes.css');
+@import url('../componentesCSS/formularioComponente.css');
+
+html{
+    font-family: "Oswald", sans-serif;
+}
 
 /* Estilos para el combobox */
 select {
@@ -48,7 +53,11 @@ select > option {
     display: block; /* Permite el desplazamiento vertical */
     height: 80px; /* Ajusta la altura para que el tbody tenga un área de desplazamiento específica */
     overflow-y: auto; /* Habilita el desplazamiento vertical */
-    width: 700%; /* Asegura que el tbody ocupe todo el ancho de la tabla */
+    width: 600%; /* Asegura que el tbody ocupe todo el ancho de la tabla */
+}
+
+.tbody--auto tbody {
+    height: 300px;
 }
 
 /* Asegura que las filas del tbody se alineen correctamente */
@@ -64,7 +73,7 @@ select > option {
     border: 1px solid #ddd; /* Añade un borde a las celdas */
     text-align: left;
     box-sizing: border-box;
-    width: 18%;
+    /* width: 100%; */
 }
 
 /* Oculta la barra de desplazamiento en Chrome, Safari y Edge */
@@ -77,9 +86,11 @@ select > option {
     scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
 }
 
-/* Estilo para asegurar que la tabla se ajuste correctamente */
-.articleTable td, .articleTable th {
-    width: 18%;
+.articleTable--350px{
+    height: 350px;
 }
 
-
+.botonera--Dos{
+    display: flex;
+    gap: 10px;
+}

@@ -13,6 +13,7 @@ html{
     
 }
 
+
 .tableHead {
     background-color: var(--white-primary); /* Color de fondo del encabezado */
     color: var(--black-primary); /* Color del texto del encabezado */

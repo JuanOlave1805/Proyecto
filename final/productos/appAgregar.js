@@ -3,6 +3,7 @@ import solicitud from "../Modulos JS/listar.js";
 import agregarDato from "../Modulos JS/agregar.js";
 import validar from "../Modulos JS/validarFormularios.js";
 import { numerosValores, numerosStock } from "../Modulos JS/moduloSoloNumeros.js";
+// import validateTextInput from "../Modulos JS/moduloSoloLetras.js";
 
 
 const dom = document;
@@ -151,7 +152,7 @@ const listar = async () => {
 
 const save = async () => {
     // Verifica la validez del formulario
-    let ok = validar("#formulario [required]");
+    let ok = validar("#registroForm");
 
     // Captura todos los atributos
     const data = {

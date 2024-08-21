@@ -46,7 +46,7 @@ const validarSesion = () => {
 
     if (!usuarioActivo) {
         // Redirigir al login si no hay sesión activa
-        window.location.href = "../../inicio/inicio.html";
+        window.location.href = "../../../index.html";
     } else {
         // Si hay sesión activa, convertir el string almacenado a un objeto
         const usuario = JSON.parse(usuarioActivo);

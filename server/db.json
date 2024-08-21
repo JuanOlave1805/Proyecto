@@ -92,7 +92,7 @@
       "nombre": "RIN 29",
       "precioVenta": "1200",
       "precioCompra": "1000",
-      "stock": "10",
+      "stock": 9,
       "categoria": "d7be",
       "proveedor": "5d55"
     }
@@ -116,6 +116,17 @@
       "fechaPedido": "2024-08-21",
       "total": "2380.00",
       "tipoPedido": "Venta"
+    },
+    {
+      "id": "73d4",
+      "idCliente": "7569823",
+      "idUsuario": "1102548251",
+      "fechaPedido": "2024-08-21",
+      "total": "1428.00",
+      "tipoPedido": "Reparacion",
+      "manoObra": "30000",
+      "fechaEntregaPedido": null,
+      "descripcion": "Cambio de rin delantero de la bicicleta  --  30000"
     }
   ],
   "detallePedidos": [
@@ -137,6 +148,16 @@
       "precioSinIva": 2000,
       "precioConIva": 2380,
       "precioIva": 380,
+      "porcentajeIva": 19
+    },
+    {
+      "id": "fb9b",
+      "idPedido": "73d4",
+      "idProducto": "f8b2",
+      "cantidad": 1,
+      "precioSinIva": 1200,
+      "precioConIva": 1428,
+      "precioIva": 228,
       "porcentajeIva": 19
     }
   ],

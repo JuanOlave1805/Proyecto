@@ -32,44 +32,48 @@ const dom = document;
 const tablaVentas = dom.querySelector("#tableVentas");
 
 const listar = async () => {
-    const fragmento = dom.createDocumentFragment();
+    const fragmento = document.createDocumentFragment(); // Corregido: 'dom' a 'document'
     const data = await solicitud(pedidos);
 
     // Crear el tbody
-    const tbody = dom.createElement('tbody');
+    const tbody = document.createElement('tbody'); // Corregido: 'dom' a 'document'
 
     data.forEach((element) => {
-        // Crear una nueva fila
-        const fila = dom.createElement('tr');
+        // Validar si el tipoPedido es "venta"
+        if (element.tipoPedido === 'Reparacion') {
+            // Crear una nueva fila
+            const fila = document.createElement('tr');
 
-        // Crear y agregar las 4 celdas con los datos
-        const celda1 = dom.createElement('td');
-        celda1.textContent = element.fechaPedido;
-        fila.appendChild(celda1);
+            // Crear y agregar las 4 celdas con los datos
+            const celda1 = document.createElement('td');
+            celda1.textContent = element.fechaPedido;
+            fila.appendChild(celda1);
 
-        const celda2 = dom.createElement('td');
-        celda2.textContent = element.idCliente;
-        fila.appendChild(celda2);
+            const celda2 = document.createElement('td');
+            celda2.textContent = element.idCliente;
+            fila.appendChild(celda2);
 
-        const celda3 = dom.createElement('td');
-        celda3.textContent = element.idUsuario;
-        fila.appendChild(celda3);
+            const celda3 = document.createElement('td');
+            celda3.textContent = element.idUsuario;
+            fila.appendChild(celda3);
 
-        const celda4 = dom.createElement('td');
-        celda4.textContent = element.total;
-        fila.appendChild(celda4);
+            const celda4 = document.createElement('td');
+            celda4.textContent = element.total;
+            fila.appendChild(celda4);
 
-        const celda5 = dom.createElement('td');
-        celda5.textContent = element.fechaEntregaPedido;
-        fila.appendChild(celda5);
+            const celda5 = document.createElement('td');
+            celda5.textContent = element.fechaEntregaPedido;
+            fila.appendChild(celda5);
 
-        // Agregar la fila al fragmento
-        fragmento.appendChild(fila);
+            // Agregar la fila al fragmento
+            fragmento.appendChild(fila);
+        }
     });
 
     // Agregar el fragmento al tbody
     tbody.appendChild(fragmento);
 
+    // Agregar el tbody a la tabla
     tablaVentas.appendChild(tbody);
 };
 

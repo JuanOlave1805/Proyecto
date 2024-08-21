@@ -187,9 +187,17 @@ const actualizar = async () => {
     // Verifica la validez del formulario
     const ok = validar("#registroForm");
 
+    // Validar el correo electrónico
+    const isEmailValid = validateEmail($inputCorreo);
+
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");
-        return;
+        return; // Salir de la función si la validación del formulario falla
+    }
+
+    if (!isEmailValid) {
+        alert('Por favor, corrige los errores en el formulario antes de enviarlo.');
+        return; // Salir de la función si el correo no es válido
     }
 
     // Captura todos los atributos
@@ -238,6 +246,7 @@ const actualizar = async () => {
         alert("Ocurrió un error al intentar actualizar el usuario.");
     }
 };
+
 
 //Seleccion de opcion
 document.querySelectorAll('select').forEach(select => {

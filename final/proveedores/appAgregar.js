@@ -80,15 +80,23 @@ const save = async () => {
     // Verifica la validez del formulario
     let ok = validar("#registroForm"); // Llama a la función validar
 
-    // Captura todos los atributos
-    const data = {
-        nombre: $inputNombre.value.toUpperCase(),
-        contactoNombre: $inputEncargado.value,
-        correo: $inputCorreo.value,
-        telefono: $inputTelefono.value
-    };
+    // Validar el correo electrónico
+    const isEmailValid = validateEmail($inputCorreo);
+
+    if (!isEmailValid) {
+        alert('Por favor, corrige los errores en el formulario antes de enviarlo.');
+        return; // Si el correo no es válido, no continuar
+    }
 
     if (ok) {
+        // Captura todos los atributos
+        const data = {
+            nombre: $inputNombre.value.toUpperCase(),
+            contactoNombre: $inputEncargado.value,
+            correo: $inputCorreo.value,
+            telefono: $inputTelefono.value
+        };
+
         try {
             const resultado = await agregarDato(proveedores, data);
             console.log('Resultado:', resultado); // Maneja el resultado
@@ -111,6 +119,7 @@ const save = async () => {
         }
     }
 };
+
 
 // Función para habilitar o deshabilitar el botón
 function toggleButtonState() {

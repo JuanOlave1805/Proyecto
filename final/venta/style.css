@@ -58,6 +58,7 @@ select > option {
 
 .tbody--auto tbody {
     height: 300px;
+    width: 1000%;
 }
 
 /* Asegura que las filas del tbody se alineen correctamente */

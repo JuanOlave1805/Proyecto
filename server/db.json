@@ -65,7 +65,7 @@
       "nombre": "CORAZA KENDA RIN 26",
       "precioVenta": "2000",
       "precioCompra": "1000",
-      "stock": "10",
+      "stock": 4,
       "categoria": "7ec5",
       "proveedor": "5d55"
     },
@@ -74,7 +74,7 @@
       "nombre": "CORAZA KENDA RIN 27",
       "precioVenta": "2000",
       "precioCompra": "1000",
-      "stock": "10",
+      "stock": 8,
       "categoria": "7ec5",
       "proveedor": "c7c1"
     },
@@ -86,15 +86,6 @@
       "stock": "10",
       "categoria": "d7be",
       "proveedor": "5d55"
-    },
-    {
-      "id": "d168",
-      "nombre": "",
-      "precioVenta": "",
-      "precioCompra": "",
-      "stock": "",
-      "categoria": "7ec5",
-      "proveedor": "c7c1"
     },
     {
       "id": "f8b2",
@@ -117,6 +108,14 @@
       "manoObra": "0",
       "fechaEntregaPedido": "0000/00/00",
       "descripcion": ""
+    },
+    {
+      "id": "4e1e",
+      "idCliente": "1102548251",
+      "idUsuario": "1102548251",
+      "fechaPedido": "2024-08-21",
+      "total": "2380.00",
+      "tipoPedido": "Venta"
     }
   ],
   "detallePedidos": [
@@ -129,6 +128,16 @@
       "precioConIva": "1000",
       "precioIva": "100",
       "porcentajeIva": "5"
+    },
+    {
+      "id": "5748",
+      "idPedido": "4e1e",
+      "idProducto": "8c02",
+      "cantidad": 1,
+      "precioSinIva": 2000,
+      "precioConIva": 2380,
+      "precioIva": 380,
+      "porcentajeIva": 19
     }
   ],
   "categorias": [

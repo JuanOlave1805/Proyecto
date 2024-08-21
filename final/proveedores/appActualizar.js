@@ -82,9 +82,17 @@ const actualizar = async () => {
     // Verifica la validez del formulario
     let ok = validar("#registroForm");
 
+    // Validar el correo electrónico
+    const isEmailValid = validateEmail($inputCorreo);
+
     if (!ok) {
         alert("Por favor, complete todos los campos requeridos.");
-        return;
+        return; // Si la validación del formulario falla, no continuar
+    }
+
+    if (!isEmailValid) {
+        alert('Por favor, corrige los errores en el formulario antes de enviarlo.');
+        return; // Si el correo no es válido, no continuar
     }
 
     // Captura todos los atributos
@@ -123,6 +131,7 @@ const actualizar = async () => {
         alert("Ocurrió un error al intentar actualizar el proveedor.");
     }
 };
+
 
 
 // Función para habilitar o deshabilitar el botón

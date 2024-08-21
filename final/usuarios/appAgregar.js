@@ -75,8 +75,15 @@ $formulario.addEventListener('submit', async (event) => {
 });
 
 // Funciones
-
 const save = async () => {
+
+    // Validar el correo electrónico
+    const isEmailValid = validateEmail($inputCorreo);
+
+    if (!isEmailValid) {
+        alert('Por favor, corrige los errores en el formulario antes de enviarlo.');
+        return; // Si el correo no es válido, no continuar
+    }
 
     // Captura todos los atributos
     const data = {
@@ -124,6 +131,7 @@ const save = async () => {
         console.error('Error al agregar el dato:', error);
     }
 };
+
 
 //Seleccion de opcion
 document.querySelectorAll('select').forEach(select => {

@@ -1,11 +1,8 @@
 function validateEmail(input) {
-    // Expresión regular para validar el correo electrónico
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    const value = input.value;
+    const value = input.value.trim();
     const isValid = emailPattern.test(value);
 
-    // Verificar si el span ya existe, si no, crearlo
     let span = input.nextElementSibling;
     if (!span || span.tagName !== 'SPAN') {
         span = document.createElement('span');
@@ -14,22 +11,23 @@ function validateEmail(input) {
     }
 
     if (value.length === 0) {
-        // Si el valor está vacío
-        input.style.border = '2px solid red'; // Borde rojo
-        span.textContent = 'Este campo no puede estar vacío'; // Mensaje de error
+        input.style.border = '2px solid red';
+        span.textContent = 'Este campo no puede estar vacío';
         span.style.color = 'red';
-        span.style.display = 'block'; // Mostrar el span
+        span.style.display = 'block';
+        return false; // Retorna falso si el campo está vacío
     } else if (isValid) {
-        // Si el valor es un correo electrónico válido
-        input.style.border = '2px solid green'; // Borde verde
-        span.style.display = 'none'; // Ocultar el span
+        input.style.border = '2px solid green';
+        span.style.display = 'none';
+        return true; // Retorna verdadero si es un correo válido
     } else {
-        // Si el valor no es un correo electrónico válido
-        input.style.border = '2px solid red'; // Borde rojo
-        span.textContent = 'Ingrese un correo electrónico válido'; // Mensaje de error
+        input.style.border = '2px solid red';
+        span.textContent = 'Ingrese un correo electrónico válido';
         span.style.color = 'red';
-        span.style.display = 'block'; // Mostrar el span
+        span.style.display = 'block';
+        return false; // Retorna falso si no es un correo válido
     }
 }
+
 
 export default validateEmail;

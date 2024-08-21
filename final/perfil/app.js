@@ -43,7 +43,7 @@ const cerrarSesion = () => {
     localStorage.removeItem("usuarioActivo");
 
     // Redirigir al login
-    window.location.href = "../inicio/inicio.html";
+    window.location.href = "../../index.html";
 };
 
 const listar = () => {

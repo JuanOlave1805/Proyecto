@@ -1,7 +1,0 @@
-Poner en espera la tabla tarea.
-Desglozar el apartado de reparaciones como lo hice en tb_pedidos y tb_detalle_pedido
-Investigar en base en que se hacen los tallajes de bicicletas y unirlo con la tabla relacional tb_talla_tipo_producto
-Agregar la tabla de accesorios a la tabla tb_productos
-Cambiar nombre a la tabla de registro del cliente
-
-INVESTIGAR BASES DE DATOS DE PROYECTOS SIMILARES
